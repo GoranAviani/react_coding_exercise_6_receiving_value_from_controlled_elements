@@ -13,7 +13,7 @@ class Validator extends React.Component {
     }
 
     userInput = (e) => {
-        console.log(e.target.value)
+       this.setState({password: e.target.value})
     }
 
     render() {
@@ -25,7 +25,7 @@ class Validator extends React.Component {
                         <input
                             type="password"
                             value={this.state.password}
-                            onChange={(e) => this.setState({password: e.target.value.toUpperCase()})}
+                            onChange={this.userInput}
 
                         />
                     </div>
