@@ -9,7 +9,7 @@ class Validator extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log("pass" + this.state.password)
+        console.log(this.state.password)
     }
 
     userInput = (e) => {
@@ -24,8 +24,9 @@ class Validator extends React.Component {
                         <label>Enter Password</label>
                         <input
                             type="password"
-                            onChange={this.userInput}
-                            value={this.state.password}
+                             value={this.state.password}
+                            onChange={(e) => this.setState({password: e.target.value.toUpperCase()})}
+
                         />
                     </div>
                     {this.state.password.length < 4 ? 'Password must be at least 4 characters' : ''}
