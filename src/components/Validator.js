@@ -13,7 +13,7 @@ class Validator extends React.Component {
     }
 
     userInput = (e) => {
-       this.setState({password: e.target.value})
+        this.setState({password: e.target.value})
     }
 
     render() {
