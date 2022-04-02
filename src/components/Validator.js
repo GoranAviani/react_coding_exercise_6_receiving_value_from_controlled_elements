@@ -5,7 +5,7 @@ class Validator extends React.Component {
     // in the previous videos. You can ignore this different syntax for now.
     constructor(props) {
         super(props);
-        this.state = { password: '' };
+        this.state = {password: ''};
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -14,7 +14,7 @@ class Validator extends React.Component {
 
     userInput = (e) => {
         console.log(e.target.value)
-}
+    }
 
     render() {
         return (
@@ -24,7 +24,7 @@ class Validator extends React.Component {
                         <label>Enter Password</label>
                         <input
                             type="password"
-                             value={this.state.password}
+                            value={this.state.password}
                             onChange={(e) => this.setState({password: e.target.value.toUpperCase()})}
 
                         />
